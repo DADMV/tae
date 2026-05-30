@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+    min-height:100vh;
+}
+
+/* ===== FONDO ===== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("fondo/taza.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:-2;
+}
+
+/* ===== MENU ===== */
+
+.menu{
+    text-align:center;
+    padding:30px 0;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#f0ab1b;
+    letter-spacing:4px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ffd36b;
+}
+
+/* ===== TITULO ===== */
+
+.titulo{
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#f0ab1b;
+
+    font-size:60px;
+
+    margin-bottom:40px;
+
+    font-weight:500;
+}
+
+/* ===== GALERIA ===== */
+
+.galeria{
+    width:85%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    padding-bottom:40px;
+}
+
+/* ===== TARJETAS ===== */
+
+.foto{
+
+    transition:.3s;
+}
+
+.foto:hover{
+    transform:translateY(-5px);
+
+ 
+}
+
+/* ===== IMAGEN ===== */
+
+.foto img{
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+/* ===== TITULO FOTO ===== */
+
+.foto h3{
+    text-align:center;
+
+    padding:15px;
+
+    color:#f0ab1b;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:700px){
+
+    .titulo{
+        font-size:42px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+        width:90%;
+    }
+
+    .foto img{
+        height:350px;
+    }
+}
